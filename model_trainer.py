@@ -50,7 +50,12 @@ def train_model():
         
         # TODO: Train model to predict Y given X
         # you can use any model but we suggest (and import) RandomForestRegressor
-        model = ...
+        # IMPLEMENTACIÓN DEL ENTRENAMIENTO:
+        # 1. Creamos la instancia del modelo (el comité de sabios)
+        model = RandomForestRegressor(n_estimators=100, random_state=42)
+        
+        # 2. "Fit" es la orden para que el modelo aprenda de los datos X e y
+        model.fit(X, y)
         
         # Save model and metadata
         model_info = {
